@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:background="@color/colorPrimaryDark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/weatherIcon"
+                android:layout_width="@dimen/details_weather_icon_width"
+                android:layout_height="@dimen/details_weather_icon_height"
+                android:layout_marginTop="@dimen/margin_32dp"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                android:importantForAccessibility="no"
+                android:padding="@dimen/default_padding"
+                android:scaleType="fitCenter"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/ic_day_cloudy"/>
+
+        <TextView
+                android:id="@+id/location_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryFont"
+                android:textSize="@dimen/textsize_24sp"
+                android:textStyle="normal"
+                app:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/weatherIcon"
+                tools:text="McLean, Virginia"/>
+
+        <View
+                android:id="@+id/weather_info_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/margin_32dp"
+                android:layout_marginLeft="@dimen/margin_32dp"
+                android:layout_marginTop="@dimen/margin_32dp"
+                android:layout_marginEnd="@dimen/margin_32dp"
+                android:layout_marginRight="@dimen/margin_32dp"
+                android:background="#66f3f4f4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location_tv"/>
+
+        <TextView
+                android:id="@+id/degree_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_32dp"
+                android:layout_marginLeft="@dimen/margin_32dp"
+                android:layout_marginTop="@dimen/margin_32dp"
+                android:layout_marginEnd="@dimen/margin_32dp"
+                android:layout_marginRight="@dimen/margin_32dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryFont"
+                android:textSize="@dimen/textsize_80sp"
+                android:textStyle="normal"
+                app:fontFamily="sans-serif-thin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weather_info_divider"
+                tools:text="-8°"/>
+
+        <TextView
+                android:id="@+id/weather_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryFont"
+                android:textSize="@dimen/textsize_24sp"
+                android:textStyle="normal"
+                app:fontFamily="sans-serif"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/degree_tv"
+                tools:text="Partly Cloudy"/>
+
+        <TextView
+                android:id="@+id/high_low_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/default_padding"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryFont"
+                android:textSize="@dimen/textsize_18sp"
+                app:fontFamily="sans-serif-medium"
+                app:layout_constraintStart_toStartOf="@+id/weather_info_divider"
+                app:layout_constraintTop_toBottomOf="@+id/weather_desc_tv"
+                tools:text="68º/56º"/>
+
+        <ImageView
+                android:id="@+id/raindrop_iv"
+                android:layout_width="@dimen/rainddrop_width"
+                android:layout_height="@dimen/raindrop_height"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:importantForAccessibility="no"
+                app:layout_constraintBottom_toBottomOf="@+id/precipitation_tv" app:layout_constraintEnd_toStartOf="@+id/precipitation_tv" app:layout_constraintTop_toTopOf="@id/precipitation_tv"
+                app:srcCompat="@mipmap/raindrop"/>
+
+        <TextView
+                android:id="@+id/precipitation_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/default_padding"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryFont"
+                android:textSize="@dimen/textsize_18sp"
+                app:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="@+id/weather_info_divider"
+                app:layout_constraintTop_toBottomOf="@+id/weather_desc_tv"
+                tools:text="0%"/>
+
+        <View
+                android:id="@+id/subdetails_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/margin_32dp"
+                android:layout_marginLeft="@dimen/margin_32dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_32dp"
+                android:layout_marginRight="@dimen/margin_32dp"
+                android:background="#66f3f4f4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/precipitation_tv"/>
+
+        <TextView
+                android:id="@+id/windspeed_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:padding="@dimen/default_padding"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryFont"
+                android:textSize="@dimen/textsize_14sp"
+                app:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toStartOf="@+id/humidity_header"
+                app:layout_constraintStart_toStartOf="@+id/subdetails_divider"
+                app:layout_constraintTop_toBottomOf="@+id/subdetails_divider"
+                tools:text="5 MPH"/>
+
+        <TextView
+                android:id="@+id/windspeed_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:padding="@dimen/default_padding"
+                android:text="@string/windspeedheader"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryFont"
+                android:textSize="@dimen/textsize_14sp"
+                app:fontFamily="sans-serif"
+                app:layout_constraintEnd_toEndOf="@+id/windspeed_value_tv"
+                app:layout_constraintStart_toStartOf="@+id/windspeed_value_tv"
+                app:layout_constraintTop_toBottomOf="@+id/windspeed_value_tv"/>
+
+        <TextView
+                android:id="@+id/humidity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_padding"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryFont"
+                app:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="@+id/subdetails_divider"
+                app:layout_constraintStart_toStartOf="@+id/subdetails_divider"
+                app:layout_constraintTop_toTopOf="@+id/windspeed_value_tv"
+                tools:text="78%"/>
+
+        <TextView
+                android:id="@+id/humidity_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2dp"
+                android:padding="@dimen/default_padding"
+                android:text="@string/humidityheader"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryFont"
+                android:textSize="@dimen/textsize_14sp"
+                app:fontFamily="sans-serif"
+                app:layout_constraintEnd_toEndOf="@+id/humidity_tv"
+                app:layout_constraintStart_toStartOf="@+id/humidity_tv"
+                app:layout_constraintTop_toBottomOf="@+id/humidity_tv"/>
+
+        <TextView
+                android:id="@+id/uvindex_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:padding="@dimen/default_padding"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryFont"
+                app:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="@+id/subdetails_divider"
+                app:layout_constraintStart_toEndOf="@+id/humidity_header"
+                app:layout_constraintTop_toTopOf="@+id/humidity_tv"
+                tools:text="Low 0"/>
+
+        <TextView
+                android:id="@+id/uvindex_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2dp"
+                android:padding="@dimen/default_padding"
+                android:text="@string/uvindexheader"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryFont"
+                android:textSize="@dimen/textsize_14sp"
+                app:fontFamily="sans-serif"
+                app:layout_constraintEnd_toEndOf="@+id/uvindex_tv"
+                app:layout_constraintStart_toStartOf="@+id/uvindex_tv"
+                app:layout_constraintTop_toBottomOf="@+id/uvindex_tv"/>
+
+        <View
+                android:id="@+id/extra_info_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/margin_32dp"
+                android:layout_marginLeft="@dimen/margin_32dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:layout_marginEnd="@dimen/margin_32dp"
+                android:layout_marginRight="@dimen/margin_32dp"
+                android:background="#66f3f4f4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/humidity_header"/>
+
+        <ImageView
+                android:id="@+id/alert_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:contentDescription="@string/alert_icon_cd"
+                android:importantForAccessibility="no"
+                android:padding="@dimen/default_padding"
+                android:scaleType="center"
+                app:layout_constraintStart_toStartOf="@+id/extra_info_divider"
+                app:layout_constraintTop_toBottomOf="@+id/extra_info_divider"
+                app:srcCompat="@drawable/ic_error_outline_white_24dp"/>
+
+        <TextView
+                android:id="@+id/alerts_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:padding="@dimen/default_padding"
+                android:text="@string/alerts_header"
+                android:textColor="@color/colorPrimaryFont"
+                android:textSize="18sp"
+                app:fontFamily="sans-serif-medium"
+                app:layout_constraintBottom_toBottomOf="@+id/alert_icon"
+                app:layout_constraintStart_toEndOf="@+id/alert_icon"
+                app:layout_constraintTop_toTopOf="@+id/alert_icon"/>
+
+        <TextView
+                android:id="@+id/alert_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:gravity="center"
+                android:padding="@dimen/default_padding"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryFont"
+                app:fontFamily="sans-serif-light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/alert_icon"
+                tools:text="[Insert Alert Text Here]"/>
+
+        <TextView
+                android:id="@+id/disclaimer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:padding="@dimen/default_padding"
+                android:text="@string/darksky_disclaimer_text"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryFont"
+                android:textSize="@dimen/disclaimer_textsize"
+                app:fontFamily="@font/oxygen_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alert_tv"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
