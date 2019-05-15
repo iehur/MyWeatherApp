@@ -22,6 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        
+        <!--TODO(13) Add Details Activity to Manifest -->
     </application>
 
 </manifest>
