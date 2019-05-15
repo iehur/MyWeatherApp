@@ -22,6 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+                android:name=".DetailsActivity"
+                android:label="@string/details_activity_appbar_title"
+                  android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
