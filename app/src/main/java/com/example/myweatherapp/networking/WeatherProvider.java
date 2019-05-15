@@ -12,7 +12,7 @@ public class WeatherProvider {
 
     private static WeatherProvider instance;
 
-    private static final String requestKey = "4f825e89ed35e4156c4602e518e1aefe";
+    private static final String requestKey = "[INSERT API KEY HERE]";
 
     private RequestQueue queue;
 
