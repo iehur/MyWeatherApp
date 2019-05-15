@@ -1,3 +1,22 @@
 <resources>
+    <!--Sizing-->
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="default_margin">8dp</dimen>
+    <dimen name="default_padding">4dp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="margin_32dp">32dp</dimen>
+    <dimen name="default_elevation">2dp</dimen>
+    <dimen name="min_rv_item_height">265dp</dimen>
+    <dimen name="details_weather_icon_width">200dp</dimen>
+    <dimen name="details_weather_icon_height">160dp</dimen>
+    <dimen name="raindrop_height">24dp</dimen>
+    <dimen name="rainddrop_width">14dp</dimen>
+
+    <!--TextSizes-->
+    <dimen name="disclaimer_textsize">8sp</dimen>
+    <dimen name="textsize_14sp">14sp</dimen>
+    <dimen name="textsize_18sp">18sp</dimen>
+    <dimen name="textsize_24sp">24sp</dimen>
+    <dimen name="textsize_80sp">80sp</dimen>
 </resources>
