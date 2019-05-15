@@ -1,2 +1,1 @@
-# MyWeatherApp
 # My Weather App
