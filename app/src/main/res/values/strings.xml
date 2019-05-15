@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">MyWeatherApp</string>
     <string name="action_settings">Settings</string>
+    <string name="main_activity_appbar_title">Location</string>
+    <string name="details_activity_appbar_title">Weather Details</string>
+    <string name="ok">OK</string>
+    <string name="dialog_title">Oh no!</string>
+    <string name="windspeedheader">wind speed</string>
+    <string name="humidityheader">humidity</string>
+    <string name="uvindexheader">uv index</string>
+    <string name="alert_icon_cd">Alert Icon</string>
+    <string name="darksky_disclaimer_text">Powered by Dark Sky</string>
+    <string name="alerts_header">Alerts</string>
 </resources>
