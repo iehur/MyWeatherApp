@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showErrorDialog(String message) {
+        loadingIcon.setVisibility(View.GONE);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder
             .setMessage(message)
